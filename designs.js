@@ -30,6 +30,6 @@ $('td').click(function addColor() {
     if ($(this).attr('style')) {
         $(this).removeAttr('style')
     } else {
-        $(this).attr('style', 'background-color' + color);
+        $(this).attr('style', 'background-color:' + color);
     }
 })
