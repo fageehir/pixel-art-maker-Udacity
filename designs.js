@@ -21,15 +21,15 @@ function makeGrid(x, y) {
             $('#table' + i).append('<td></td>');
         }
     }
+
+    //Paint cells
+    $('td').click(function addColor() {
+        color = $('#colorPicker').val();
+
+        if ($(this).attr('style')) {
+            $(this).removeAttr('style')
+        } else {
+            $(this).attr('style', 'background-color:' + color);
+        }
+    })
 }
-
-//Paint cells
-$('td').click(function addColor() {
-    color = $('#colorPicker').val();
-
-    if ($(this).attr('style')) {
-        $(this).removeAttr('style')
-    } else {
-        $(this).attr('style', 'background-color:' + color);
-    }
-})
